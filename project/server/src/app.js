@@ -1,15 +1,22 @@
+
 const express = require("express");
 const cors = require("cors");
 
 const app = express();
 
+//cors
+app.use(
+  cors({
+    origin: "http://localhost:3001",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
+);
 
-app.use(cors());
 app.use(express.json());
 
-// i made a basic api  here fr checking
-app.get("/api/health", (req, res) => {
-  res.status(200).json({ message: "API is running" });
-});
+const productRoutes = require("./routes/productRoutes");
+
+app.use("/api/products", productRoutes);
 
 module.exports = app;
