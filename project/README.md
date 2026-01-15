@@ -95,8 +95,11 @@ Create a .env file inside the backend folder:
 
 PORT=5000
 MONGO_URI=mongodb://127.0.0.1:27017/mern_ecommerce
-JWT_SECRET=supersecretkey
-OPENAI_API_KEY="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"
+JWT_SECRET=your_jwt_secret
+OPENAI_API_KEY=your_openai_api_key_here   
+
+
+
 
 
 5️⃣ Start MongoDB
