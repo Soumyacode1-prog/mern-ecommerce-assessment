@@ -20,25 +20,25 @@ const Products = () => {
     }
 
     try {
-   
+     
       const cart = JSON.parse(localStorage.getItem("cart") || "[]");
       
-     
+  
       const existingIndex = cart.findIndex(item => item._id === product._id);
       
       if (existingIndex !== -1) {
        
         cart[existingIndex].qty = (cart[existingIndex].qty || 1) + 1;
       } else {
-       
+        
         const sanitizedProduct = sanitizeProductForCart({ ...product, qty: 1 });
         cart.push(sanitizedProduct);
       }
       
-     
+    
       localStorage.setItem("cart", JSON.stringify(cart));
       
-    
+  
       alert(`${product.name} added to cart!`);
       navigate("/orders");
     } catch (error) {
@@ -73,7 +73,7 @@ const Products = () => {
 
   return (
     <div className="products-container">
-
+    
       <section className="hero-section">
         <div className="hero-content">
           <div className="hero-text">
@@ -101,19 +101,7 @@ const Products = () => {
               </button>
             </div>
           </div>
-          <div className="hero-image">
-            <div className="hero-image-placeholder">
-              <svg width="500" height="400" viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="500" height="400" fill="#e0e7ff"/>
-                <circle cx="250" cy="150" r="60" fill="#2563eb" opacity="0.2"/>
-                <rect x="150" y="200" width="200" height="150" rx="10" fill="#2563eb" opacity="0.1"/>
-                <path d="M200 250 L250 200 L300 250 L300 350 L200 350 Z" fill="#2563eb" opacity="0.3"/>
-                <circle cx="250" cy="120" r="30" fill="#2563eb"/>
-                <text x="250" y="280" fontFamily="Arial" fontSize="24" fill="#2563eb" textAnchor="middle" fontWeight="bold">🛍️</text>
-                <text x="250" y="310" fontFamily="Arial" fontSize="18" fill="#1e40af" textAnchor="middle">Shop with Style</text>
-              </svg>
-            </div>
-          </div>
+       
         </div>
         <div className="hero-features">
           <div className="feature-item">
@@ -135,7 +123,7 @@ const Products = () => {
         </div>
       </section>
 
-
+   
       <section className="products-section">
         <h2 className="products-title">🛍️ Our Products</h2>
 

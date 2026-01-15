@@ -1,5 +1,6 @@
 
 import { Link, useNavigate } from "react-router-dom";
+
 import "./Navbar.css";
 
 export default function Navbar() {
@@ -25,7 +26,8 @@ export default function Navbar() {
             {user.role === "admin" && (
               <Link to="/admin">Admin Dashboard</Link>
             )}
-            <Link to="/orders">My Orders</Link>
+            {/* <Link to="/orders">My Orders</Link> */}
+               <Link to="/my-orders"> Orders</Link>
             <span className="navbar-user">👤 {user.name}</span>
             <button className="logout-btn" onClick={logout}>Logout</button>
           </>

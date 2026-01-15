@@ -8,6 +8,7 @@ import Orders from "./pages/Orders";
 import Chatbot from "./pages/Chatbot";
 import Admin from "./pages/Admin";
 import CreateAdmin from "./pages/CreateAdmin";
+import MyOrders from "./pages/MyOrders";
 
 export default function App() {
   return (
@@ -40,6 +41,16 @@ export default function App() {
             </ProtectedRoute>
           }
         />
+        {/* <Route path="/my-orders" element={<MyOrders />} /> */}
+<Route
+  path="/my-orders"
+  element={
+    <ProtectedRoute>
+      <MyOrders />
+    </ProtectedRoute>
+  }
+/>
+
       </Routes>
       <Chatbot />
     </BrowserRouter>

@@ -92,6 +92,41 @@ const Orders = () => {
     (sum, item) => sum + (item.price || 0) * (item.qty || 1),
     0
   );
+const confirmOrder = async () => {
+  try {
+    const token = localStorage.getItem("token");
+
+    const orderData = {
+      orderItems: cart.map(item => ({
+        product: item._id,
+        name: item.name,
+        price: item.price,
+        image: item.imageUrl,
+        description: item.description,
+        category: item.category,
+        qty: item.qty,
+      })),
+      shippingAddress: address,
+      totalPrice: total,
+    };
+
+    await fetch("http://localhost:5000/api/orders", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify(orderData),
+    });
+
+    localStorage.removeItem("cart");
+    setCart([]);
+    setStep("confirmed");
+  } catch (err) {
+    console.error(err);
+    alert("Failed to place order");
+  }
+};
 
   if (cart.length === 0 && step !== "confirmed") {
     return (
@@ -207,16 +242,11 @@ const Orders = () => {
             <button className="btn-secondary" onClick={() => setStep("checkout")}>
               Back
             </button>
-            <button
-              className="btn-primary"
-              onClick={() => {
-                setStep("confirmed");
-                localStorage.removeItem("cart");
-                setCart([]);
-              }}
-            >
-              Confirm Order
-            </button>
+       
+            <button className="btn-primary" onClick={confirmOrder}>
+  Confirm Order
+</button>
+
           </div>
         </div>
       )}

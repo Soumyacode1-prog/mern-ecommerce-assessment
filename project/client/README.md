@@ -1,3 +1,214 @@
+🛒 MERN E-Commerce Application with AI Chatbot
+📌 Project Overview
+
+This is a full-stack MERN e-commerce platform built as part of a technical assessment.
+It supports role-based access (Admin & Customer), product browsing and ordering, and includes an AI-powered chatbot to answer customer queries like product availability, pricing, categories, and store policies.
+
+The platform is designed to be modular, scalable, and easy to extend.
+
+✨ Features Implemented
+🔐 Authentication & Authorization
+
+JWT-based authentication
+
+Role-based access control (Admin / Customer)
+
+🛍 E-Commerce Features
+
+Product listing & details
+
+Category filtering
+
+Shopping cart
+
+Order placement
+
+Order history
+
+Admin product management (Add / Edit / Delete products)
+
+🤖 AI-Powered Chatbot
+
+Availability check (“Is iPhone in stock?”)
+
+Product search (“Show laptops under 50000”)
+
+Product details (“Tell me about MacBook Air”)
+
+Cheapest product lookup
+
+Category listing
+
+Help & policy queries
+
+🛠 Admin Panel
+
+Secure admin login
+
+Product management
+
+Order monitoring
+
+🧰 Technology Stack
+Frontend
+
+React.js
+
+React Router
+
+Styled Components / CSS
+
+Backend
+
+Node.js
+
+Express.js
+
+MongoDB with Mongoose
+
+JWT Authentication
+
+OpenAI API for chatbot
+
+AI Service
+
+OpenAI GPT-4o-mini for intent extraction and conversational responses
+
+⚙️ Setup Instructions
+1️⃣ Clone the repository
+git clone https://github.com/Soumyacode1-prog/mern-ecommerce-assessment.git
+cd mern-ecommerce-assessment
+
+2️⃣ Install Backend Dependencies
+cd project
+cd server
+npm install
+
+3️⃣ Install Frontend Dependencies
+cd project
+cd client
+npm install
+
+4️⃣ Environment Variables
+
+Create a .env file inside the backend folder:
+
+PORT=5000
+MONGO_URI=mongodb://127.0.0.1:27017/mern_ecommerce
+JWT_SECRET=your_jwt_secret
+OPENAI_API_KEY=your_openai_api_key_here  
+
+
+
+
+5️⃣ Start MongoDB
+
+Make sure MongoDB is running locally:
+
+mongod
+
+6️⃣ Run Backend
+cd project
+cd server
+npm run dev
+
+
+or
+
+npm start
+
+7️⃣ Run Frontend
+cd project
+cd client
+npm start
+
+▶️ Application URLs
+Service	URL
+Frontend	http://localhost:3000
+
+Backend API	http://localhost:5000
+
+Chatbot API	http://localhost:5000/api/chatbot
+
+🔑 Test Credentials
+Admin Account
+Email: shambhavisoumya10@gmail.com
+Password: 123456
+
+
+⚠️ Note: These credentials are for testing/demo only.
+Change them in production.
+
+🧪 Sample Chatbot Queries
+
+• Categories: "What do you sell?"
+
+• Help: "How do I place an order?"
+
+• Store Policies: "What's your return policy?"
+
+• Availability Check: "Is [product name] in stock?"
+
+• Product Search: "Show me [category] under [price]"
+
+• Product Details: "Tell me about [product name]"
+
+• Price Queries: "What's the cheapest laptop you have?"
+
+📦 Database
+
+Database Name: mern_ecommerce
+
+Collections:
+
+users
+
+products
+
+orders
+
+Each product contains:
+
+name
+
+price
+
+category
+
+description
+
+stock
+
+🧠 Assumptions & Design Decisions
+
+JWT is used for stateless authentication.
+
+Chatbot extracts structured intent before querying the database.
+
+Products are searched using regex for flexible matching.
+
+Price filters use “less than or equal to” logic.
+
+Admin privileges are assigned by role in the user model.
+
+The chatbot is designed for read-only assistance, not order placement.
+
+🚀 Future Enhancements
+
+Payment gateway integration
+
+Recommendation system
+
+Order tracking chatbot intent
+
+Voice chatbot support
+
+Admin analytics dashboard
+
+👩‍💻 Author
+
+Shambhavi Soumya
+Full-Stack Developer | MERN | AI Integrations
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

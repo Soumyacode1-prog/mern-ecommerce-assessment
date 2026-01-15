@@ -12,7 +12,7 @@
 
 .navbar-brand {
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 800;
   color: white !important;
   text-decoration: none;
   transition: transform 0.3s ease;
@@ -31,7 +31,7 @@
 .navbar a {
   color: white;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 26px;
   font-weight: 500;
   transition: all 0.3s ease;
   padding: 8px 16px;

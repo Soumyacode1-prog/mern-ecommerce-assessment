@@ -10,7 +10,7 @@
 
 
 .hero-section {
-  background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%);
+  background: linear-gradient(135deg, #2c55da 0%, #e3b1da 100%);
   color: white;
   padding: 80px 20px 60px;
   position: relative;
@@ -108,18 +108,7 @@
   transform: translateY(-3px);
 }
 
-.hero-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: fadeInRight 0.8s ease-out;
-}
 
-.hero-image-placeholder {
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-}
 
 .hero-image-placeholder svg {
   width: 100%;
@@ -127,7 +116,7 @@
   filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.2));
 }
 
-/* Hero Features */
+
 .hero-features {
   max-width: 1200px;
   margin: 40px auto 0;
@@ -167,7 +156,7 @@
   color: white;
 }
 
-/* Products Section */
+
 .products-section {
   padding: 60px 20px;
   max-width: 1200px;
@@ -253,7 +242,7 @@
 }
 
 .product-card button {
-  background: #2563eb;
+  background: #3763c2;
   color: white;
   border: none;
   padding: 12px 24px;
@@ -276,7 +265,7 @@
   box-shadow: 0 2px 10px rgba(52, 152, 219, 0.3);
 }
 
-/* Loading and error states */
+
 .center {
   text-align: center;
   font-size: 24px;
@@ -284,7 +273,7 @@
   margin-top: 50px;
 }
 
-/* Animations */
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -307,7 +296,7 @@
   }
 }
 
-/* Responsive design */
+
 @media (max-width: 968px) {
   .hero-content {
     grid-template-columns: 1fr;
