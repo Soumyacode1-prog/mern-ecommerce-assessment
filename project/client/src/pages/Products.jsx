@@ -95,7 +95,7 @@ const Products = () => {
               </button>
               <button 
                 className="hero-btn secondary"
-                onClick={() => navigate("/orders")}
+                onClick={() => navigate("/my-orders")}
               >
                 View Cart
               </button>
