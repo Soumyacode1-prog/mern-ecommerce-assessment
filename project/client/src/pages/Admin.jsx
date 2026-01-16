@@ -1261,6 +1261,7 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
 import "./Admin.css";
 import { FALLBACK_IMAGE, handleImageError } from "../utils/fallbackImage";
+import ParticlesBackground from "./ParticlesBackground";
 
 const Admin = () => {
   const navigate = useNavigate();
@@ -1426,6 +1427,10 @@ const productData = {
   /* ---------------- UI ---------------- */
 
   return (
+    <div className="admin-wrapper">
+    {/* 🔹 Particles Background */}
+    <ParticlesBackground />
+
     <div className="admin-container">
       <h1 className="admin-title">⚙️ Admin Dashboard</h1>
 
@@ -1681,6 +1686,7 @@ const productData = {
         </>
       )}
       </div>
+    </div>
     </div>
   );
 };

@@ -77,7 +77,7 @@
 
 // export default MyOrders;
 import React, { useEffect, useState } from "react";
-
+import "./MyOrders.css";
 const MyOrders = () => {
   const [orders, setOrders] = useState([]);
   const [loading, setLoading] = useState(true);
