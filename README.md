@@ -134,7 +134,9 @@ Admin Account
 Email: shambhavisoumya10@gmail.com
 Password: 123456
 
-Website video:   https://docs.google.com/videos/d/1QwTopKvYNY2n_QeGsqu0GidagqM0cwp_yaKw8u0oSZ0/edit?usp=sharing
+old Website video:   https://docs.google.com/videos/d/1QwTopKvYNY2n_QeGsqu0GidagqM0cwp_yaKw8u0oSZ0/edit?usp=sharing
+
+updated screen recording: https://docs.google.com/videos/d/1Eze1K8xjQoOQwOjnenrS7I8NZ2JsxI_ux1GOj66yhH0/edit?usp=sharing
 
 ⚠️ Note: These credentials are for testing/demo only.
 Change them in production.

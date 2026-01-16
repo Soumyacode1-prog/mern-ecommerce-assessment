@@ -169,7 +169,6 @@ export default function Chatbot() {
             <div ref={messagesEndRef} />
           </div>
 
-          {/* Input Area */}
           <div className="chatbot-input-area">
             <div className="chatbot-input-wrapper">
               <input
