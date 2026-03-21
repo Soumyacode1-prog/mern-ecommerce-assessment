@@ -3,10 +3,8 @@ const express = require("express");
 const cors = require("cors");
 const connectDB = require("./config/db");
 require("dotenv").config();
-const path = require("path");
-const app = express();
 
-const _dirname=path.resolve();
+const app = express();
 
 app.use(cors({
   origin: true, 
@@ -37,11 +35,7 @@ app.use("/api/admin", require("./routes/adminProductRoutes"));
 app.use("/api/admin/users", require("./routes/adminRoutes"));
 
 // app.use("/api/orders", require("./routes/orderRoutes"));
-app.use(express.static(path.join(__dirname, "../../client/build")));
 
-app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "../../client/build/index.html"));
-});
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () =>
   console.log(`Server running on port ${PORT}`)
