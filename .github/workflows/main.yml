@@ -57,6 +57,8 @@ jobs:
 
     - name: Build client
       if: hashFiles('project/client/package.json') != '' || hashFiles('client/package.json') != ''
+      env:
+        CI: false
       run: |
         if [ -d "project/client" ]; then
           cd project/client
